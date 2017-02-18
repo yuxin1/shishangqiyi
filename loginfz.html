@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册分支页面</title>
+    <style>
+        .container{
+            width:760px;
+            height:699px;
+            position:fixed;
+            left:200px;
+            top:50px;
+            background:white;
+        }
+        .main{
+            width:580px;
+            height:511px;
+            margin:20px auto;
+            padding-top:20px;
+        }
+        .main span:first-child{
+            width:259px;
+            height:46px;
+            display:block;
+            float:left;
+            line-height:45px;
+            text-align:center;
+            background:white;
+        }
+        .main span:last-child{
+            width:259px;
+            height:46px;
+            display:block;
+            float:left;
+            line-height:45px;
+            text-align:center;
+            background:black;
+        }
+        .main span:first-child a{
+            color:black;
+            text-decoration: none;
+        }
+        .main span:last-child a{
+            color:white;
+            text-decoration: none;
+        }
+        .s-top{
+            border:1px solid black;
+            width:518px;
+            height:46px;
+            margin:0 auto;
+        }
+        .z-center{
+            width:580px;
+            height:121px;
+            margin-top:10px;
+        }
+        .c-left{
+            width:126px;
+            height:121px;
+            background:gainsboro;
+            float:left;
+
+        }
+        .c-left #sp3{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+             background:0;
+            display:block;
+            line-height:15px;
+            border:1px solid #000000;
+            margin-left:50px;
+            margin-top:25px;
+        }
+        .c-left strong{
+            width:84px;
+            height:24px;
+            text-align:center
+        }
+        .c-center{
+            width:276px;
+            height:121px;
+            background:gainsboro;
+            float:left;
+            margin:0 20px;
+        }
+        .c-center #sp4{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background:0;
+            display:block;
+            line-height:15px;
+            border:1px solid #000000;
+            margin-left:125px;
+            margin-top:25px;
+        }
+        .c-right{
+            width:138px;
+            height:121px;
+            background:gainsboro;
+            float:left;
+        }
+        .c-right #sp5{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background:0;
+            display:block;
+            line-height:15px;
+            border:1px solid #000000;
+            margin-left:50px;
+            margin-top:25px;
+        }
+        .c-center em a{
+            color:red;
+        }
+        .end{
+            width:560px;
+            height:352px;
+            margin:0 auto;
+        }
+        .end input:first-child{
+            width:522px;
+            height:34px;
+            display:inline-block;
+
+        }
+        .end input:nth-of-type(2){
+            width:256px;
+            height:34px;
+            display:inline-block;
+
+        }
+        .end input:nth-of-type(3){
+            width:256px;
+            height:34px;
+            display:inline-block;
+            margin-left:4px;}
+        .end input:nth-of-type(4){
+            width:256px;
+            height:34px;
+            display:inline-block;
+           }
+        .cd{
+            width:257px;
+            height:34px;
+            color:grey;
+            display:inline-block;
+        }
+        .sj input:nth-of-type(1){
+            width:256px;
+            height:34px;
+            display:inline-block;
+            float:left;
+        }
+        input{
+            margin-top:8px;
+        }
+        .sj input:nth-of-type(2){
+            width:92px;
+            height:34px;
+            display:inline-block;
+            margin-left:28px;
+            float:left
+        }
+        .tp{
+            width:68px;
+            height:31px;
+            border:1px solid darkgray;
+            float:left;
+            margin-top:10px;
+            margin-left:10px;
+        }
+        .dq{
+            width:532px;
+            height:42px;
+            margin-top:50px;
+            color:lightgray;
+        }
+        #cd1{
+          width:138px;
+            height:34px;
+            color:grey;
+        }
+        .end input:nth-of-type(5){
+            width:522px;
+            height:34px;
+        }
+        #yd{
+            width:532px;
+            height:18px;
+        }
+
+        #xuanze{
+            width:14px;
+            height:14px;
+            display:inline-block;
+                 }
+        #yd a:nth-of-type(2){
+            color:black;
+            margin-left:70px;
+        }
+        .weibu{
+            width:532px;
+            height:46px;
+            margin-top:15px;
+        }
+        #btn{
+            width:200px;
+            height:46px;
+            background:black;
+            margin:10px auto;
+            display:block;
+            color:white;
+            border:none;
+        }
+        #closes{
+            width:30px;
+            height:30px;
+            background:black;
+            border-radius:100%;
+            display:block;
+            position:absolute;
+            right:0;
+            top:-10px;
+            color:white;
+            line-height:30px;
+            text-align:center;
+            font-size:26px;
+        }
+    </style>
+</head>
+<script src="js/lib/jquery-2.2.4.min.js"></script>
+<script src="js/app/loginfz.js"></script>
+<body>
+
+<div class="container">
+    <span id="closes">x</span>
+    <div class="main">
+        <div class="s-top">
+            <span id="sp1"><a href="login.html">普通会员注册</a></span>
+            <span id="sp2"><a href="#">批发会员注册</a></span>
+        </div>
+        <div class="z-center">
+            <div class="c-left">
+                <span id="sp3">1</span>
+                <p style="width:84px;height:5px;font-weight: 900;margin-left:20px;font-size:14px;margin-top:50px;">填写会员信息</p>
+                <em style="font-style:normal;font-size:12px;display:block;margin-left:25px;margin-bottom:0;">请如实填写信息，&nbsp;便于联系</em>
+            </div>
+            <div class="c-center">
+                <span id="sp4">2</span>
+                <p style="width:234px;height:0;font-weight:900;font-size:14px;margin-top:50px;margin-left:110px;">发送资料</p>
+                <em style="font-size:12px;font-style:normal; display:block;margin-left:20px;">发送资料
+                    发送身份证、营业执照或店铺地址至
+                    <a href="#">shishangqiyi_2010@126.com</a> (注明注册ID)</em>
+            </div>
+            <div class="c-right">
+                <span id="sp5">3</span>
+                <p style="width:234px;height:0;font-weight:900;font-size:14px;margin-top:50px;margin-left:30px;margin-bottom:15px;">客服审核</p>
+                <em style="font-size:12px;font-style:normal; display:block;margin-left:20px;">请耐心等待审核
+                    审核通过即可登录
+                   </em>
+            </div>
+        </div>
+        <div class="end">
+            <input type="email" value="" placeholder="电子邮件"/>
+            <input type="password" value="" placeholder="密码"/>
+            <input type="password" value="" placeholder="再次输入密码"/>
+            <input type="text" placeholder="用户名"/>
+            <select class="cd">
+                <option>性别</option>
+                <option>男</option>
+                <option>女</option>
+            </select>
+            <div class="sj">
+            <input type="text" placeholder="手机号码"/>
+            <div class="tp"><img src="images/safecode%20(7).jpg"/></div>
+            <input type="text" placeholder="验证码"/>
+            </div>
+            <div class="dq">
+                <lable for="cd1">地区范围：</lable>
+
+                <select id="cd1">
+                    <option>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>信阳</option>
+                    <option>商丘</option>
+                </select>
+            </div>
+            <input type="text" placeholder="您的详细地址"/>
+            <div id="yd">
+                <input id="xuanze" type="checkbox"/>我已阅读并同意<a href="#">《时尚起义用户使用条款》</a>
+                <a href="">老用户登录</a>
+            </div>
+            <div class="weibu">
+                <button id="btn">批发会员注册</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
