@@ -24,29 +24,92 @@ $(function(){
         })
     })
 });
-//验证
+//验证邮箱
 var ruleMail = /^\w+@(126|qq|163)\.(com|cn)$/;
-$(function(){
-   $("#dz").keyup(function(){
-       if(ruleMail.test($(this).val())){
-           console.log(0);
-           $(".error1").hide(200);
-       }else{
-           $(".error1").text("您的格式有误");
-           $(".error1").show(200);
-           $(".error1").css({
-               "color":"red"
-           })
-           $(document).click(function(){
-               $("#dz").focus()
-           })
-       }
-   })
-    $("#dz").blur(function(){
-        if($(this).val()==""){
-            $(".error1").text("内容不能为空");
-            $(".error1").show()
-        }
+    $(function(){
+        $("#dz").keyup(function(){
+            if(ruleMail.test($(this).val())){
+                console.log(0);
+                $(".error1").hide(200);
+            }else{
+                $(".error1").text("您的格式有误");
+                $(".error1").show(200);
+                $(".error1").css({
+                    "color":"red"
+                })
+                $(document).click(function(){
+                    $("#dz").focus()
+                })
+            }
+        })
+        $("#dz").blur(function(){
+            if($(this).val()==""){
+                $(".error1").text("内容不能为空");
+                $(".error1").show()
+                $(".error1").css({
+                    "color":"red"
+                })
+            }
+        })
+//验证密码
+        var rulespwd=/^\w{4,10}$/;
+        $("#pwd").keyup(function(){
+            if(rulespwd.test($(this).val())){
+                $(".error2").hide(200);
+            }else{
+                $(".error2").show(200);
+                $(".error2").text("密码不对");
+                $(".error2").css({
+                    "color":"red"
+                })
+            }
+        })
+        $("#pwd").blur(function(){
+            if($(this).val()==""){
+                $("error2").text("内容不能为空");
+                $(".error2").show();
+                $(".error2").css({
+                    "color":"red"
+                })
+            }
+        })
+        //确认密码确认
+        $("#pwd2").keyup(function(){
+            if($(this).val()==$("#pwd").val()){
+                $(".error3").hide();
+            }else{
+                $(".error3").text("密码不一致");
+                $(".error3").show();
+                $(".error3").css({
+                    "color":"red"
+                })
+            }
+        })
     })
+//验证用户名
+    var ruleun=/^[a-zA-Z]\w{3,6}$/;
+    $(function(){
+        $("#un").keyup(function(){
+            if(ruleun.test($(this).val())){
+                $(".error4").hide();
+            }else{
+                $(".error4").show();
+                $(".error4").text("用户名输入错误");
+                $(".error4").css("color","red")
+
+            }
+        })
+        var  re = /^1\d{10}$/
+        $(function(){
+            $("#phone").keyup(function(){
+                if(re.test($(this).val())){
+                    $(".error6").hide();
+                }else{
+                    $(".error6").show();
+                    $(".error6").text("手机格式不正确");
+                    $(".error6").css("color","red")
+                }
+            })
+        })
 });
-var rulespwd=/^(a-zA-Z)\W{4,10}$/;
+

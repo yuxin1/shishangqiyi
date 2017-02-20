@@ -230,6 +230,44 @@
             text-align:center;
             font-size:26px;
         }
+        .error{
+            display:block;
+            height:18px;
+            width:100px;
+            position:absolute;
+            top:220px;left:0;
+            margin-left:100px;
+        }
+        .error0{
+            top:220px;
+            left:0;
+            margin-left:100px;
+        }
+        .error1{
+            top:270px;
+            left:0;
+            margin-left:100px;
+        }
+        .error2{
+            top:270px;
+            left:0;
+            margin-left:370px;
+        }
+        .error3{
+            top:320px;
+            left:0;
+            margin-left:100px;
+        }
+        .error4{
+            top:360px;
+            left:0;
+            margin-left:100px;
+        }
+        .error5{
+           top:450px;
+            left:0;
+            margin-left:100px;
+        }
     </style>
 </head>
 <script src="js/lib/jquery-2.2.4.min.js"></script>
@@ -265,17 +303,17 @@
             </div>
         </div>
         <div class="end">
-            <input type="email" value="" placeholder="电子邮件"/>
-            <input type="password" value="" placeholder="密码"/>
-            <input type="password" value="" placeholder="再次输入密码"/>
-            <input type="text" placeholder="用户名"/>
+            <input type="email" value="" placeholder="电子邮件" id="dz"/>
+            <input type="password" value="" placeholder="密码" id="pwd1"/>
+            <input type="password" value="" placeholder="再次输入密码" id="pwd2"/>
+            <input type="text" placeholder="用户名" id="un"/>
             <select class="cd">
                 <option>性别</option>
                 <option>男</option>
                 <option>女</option>
             </select>
             <div class="sj">
-            <input type="text" placeholder="手机号码"/>
+            <input type="text" placeholder="手机号码" id="phone"/>
             <div class="tp"><img src="images/safecode%20(7).jpg"/></div>
             <input type="text" placeholder="验证码"/>
             </div>
@@ -291,6 +329,12 @@
                 </select>
             </div>
             <input type="text" placeholder="您的详细地址"/>
+            <span class="error error0"></span>
+            <span class="error error1"></span>
+            <span class="error error2"></span>
+            <span class="error error3"></span>
+            <span class="error error4"></span>
+            <span class="error error5"></span>
             <div id="yd">
                 <input id="xuanze" type="checkbox"/>我已阅读并同意<a href="#">《时尚起义用户使用条款》</a>
                 <a href="">老用户登录</a>
